@@ -1,0 +1,18 @@
+#!/usr/bin/env php
+<?php
+
+require_once __DIR__.'/src/symfony/src/Symfony/Framework/UniversalClassLoader.php';
+
+use Symfony\Framework\UniversalClassLoader;
+use GotFile\Application;
+
+$loader = new UniversalClassLoader();
+$loader->registerNamespaces(array(
+  'GotFile' => __DIR__.'/src',
+  'Symfony' => __DIR__.'/src/symfony/src'
+));
+$loader->register();
+
+$application = new Application();
+$application->run();
+
