@@ -1,9 +1,9 @@
 #!/usr/bin/env php
 <?php
 
-require_once __DIR__.'/src/symfony/src/Symfony/Framework/UniversalClassLoader.php';
+require_once __DIR__.'/src/symfony/src/Symfony/Component/HttpFoundation/UniversalClassLoader.php';
 
-use Symfony\Framework\UniversalClassLoader;
+use Symfony\Component\HttpFoundation\UniversalClassLoader;
 use GotFile\Application;
 
 $loader = new UniversalClassLoader();
